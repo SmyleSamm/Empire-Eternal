@@ -1,7 +1,7 @@
 [gd_scene load_steps=3 format=2]
 
 [ext_resource path="res://scenes/uiElements/buttons/clickerForCounter.gd" type="Script" id=1]
-[ext_resource path="res://scenes/worlds/gameMenu.tres" type="DynamicFont" id=2]
+[ext_resource path="res://assets/fonts/presets/gameMenu.tres" type="DynamicFont" id=2]
 
 [node name="clickerForFirstCounter" type="Button"]
 margin_right = 12.0

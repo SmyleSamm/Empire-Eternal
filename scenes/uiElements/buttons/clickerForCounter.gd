@@ -7,6 +7,15 @@ export var value: int
 var playerCounter: Dictionary
 
 func _ready():
+	print("Initializing clickerButton...")
+	var timer = Timer.new()
+	add_child(timer)
+	timer.wait_time = 0.1
+	timer.one_shot = true
+	timer.connect("timeout", self, "_on_timer_timeout")
+	timer.start()
+
+func _on_timer_timeout():
 	player = getPlayer()
 	var faulty: bool = false
 	if not player:
@@ -38,7 +47,7 @@ func _ready():
 		return
 	else:
 		print("Clicker initialisation successfull!")
-
+		
 func getPlayer() -> Node:
 	var currentScene = get_tree().current_scene
 	var children = currentScene.get_children()
@@ -46,6 +55,7 @@ func getPlayer() -> Node:
 		if n.name == playerName:
 			return n
 	printerr("The player node was unable to be located!")
+	print("I am ",name)
 	print("Check if the node is named", playerName, "or is not in another Node")
 	print("e.g. SceneNode -> someNode, someNode, player, someNode")
 	return null
@@ -53,4 +63,3 @@ func getPlayer() -> Node:
 
 func _on_clickerForFirstCounter_pressed():
 	playerCounter[counter] += value
-	print(playerCounter)
