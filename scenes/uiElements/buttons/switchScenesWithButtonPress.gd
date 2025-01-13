@@ -3,6 +3,11 @@ extends Button
 export var newScene: PackedScene
 
 func _on_switchScenesWithButtonPress_pressed():
+	#
+	#Because of weird errors I could figure out, this script was written by AI
+	#Function is as intended
+	#
+	
 	# Ensure the new scene is loaded
 	if not newScene:
 		printerr("Error: newScene is not set!")
