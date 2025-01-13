@@ -8,10 +8,26 @@
 
 config_version=4
 
+_global_script_classes=[ {
+"base": "Object",
+"class": "Player",
+"language": "GDScript",
+"path": "res://player.gd"
+} ]
+_global_script_class_icons={
+"Player": ""
+}
+
 [application]
 
 config/name="EmpireEternal"
+run/main_scene="res://scenes/worlds/gameMenu.tscn"
 config/icon="res://icon.png"
+
+[display]
+
+window/size/width=660
+window/size/height=360
 
 [gui]
 
