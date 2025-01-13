@@ -3,7 +3,7 @@
 [ext_resource path="res://scenes/uiElements/buttons/clickerForCounter.tscn" type="PackedScene" id=1]
 [ext_resource path="res://scenes/gameObjects/player.tscn" type="PackedScene" id=2]
 [ext_resource path="res://assets/fonts/presets/gameMenu.tres" type="DynamicFont" id=3]
-[ext_resource path="res://scenes/worlds/Label.gd" type="Script" id=4]
+[ext_resource path="res://scenes/uiElements/CounterDisplay.gd" type="Script" id=4]
 
 [node name="game" type="Node2D"]
 
