@@ -4,6 +4,8 @@ const playerName = "player"
 var player
 export var counter: String
 export var value: int
+var valueChanged: bool = true
+const clickerText: String = "Click me!\nYou will gain\n+"
 var playerCounter: Dictionary
 
 func _ready():
@@ -60,6 +62,13 @@ func getPlayer() -> Node:
 	print("e.g. SceneNode -> someNode, someNode, player, someNode")
 	return null
 
-
+func increaseValue(increasement: int) -> void:
+	value += increasement
+	valueChanged=true
+	
+func _process(delta):
+	if valueChanged:
+		text = clickerText+str(value)
+		valueChanged=false
 func _on_clickerForFirstCounter_pressed():
 	playerCounter[counter] += value

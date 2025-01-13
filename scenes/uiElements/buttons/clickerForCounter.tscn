@@ -3,11 +3,13 @@
 [ext_resource path="res://scenes/uiElements/buttons/clickerForCounter.gd" type="Script" id=1]
 [ext_resource path="res://assets/fonts/presets/gameMenu.tres" type="DynamicFont" id=2]
 
-[node name="clickerForFirstCounter" type="Button"]
+[node name="clickerForCounter" type="Button"]
 margin_right = 12.0
 margin_bottom = 20.0
 custom_fonts/font = ExtResource( 2 )
-text = "Click me!"
+text = "Click me!
+You will gain
++0"
 script = ExtResource( 1 )
 
 [connection signal="pressed" from="." to="." method="_on_clickerForFirstCounter_pressed"]
