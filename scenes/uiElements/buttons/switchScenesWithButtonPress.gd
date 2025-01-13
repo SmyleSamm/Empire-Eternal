@@ -4,7 +4,7 @@ export var newScene: PackedScene
 
 func _on_switchScenesWithButtonPress_pressed():
 	#
-	#Because of weird errors I could figure out, this script was written by AI
+	#Because of weird errors I could not figure out, this script was written by AI
 	#Function is as intended
 	#
 	
