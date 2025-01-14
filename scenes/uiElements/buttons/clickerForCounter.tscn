@@ -6,6 +6,7 @@
 [node name="clickerForCounter" type="Button"]
 margin_right = 12.0
 margin_bottom = 20.0
+rect_min_size = Vector2( 200, 60 )
 custom_fonts/font = ExtResource( 2 )
 text = "Click me!
 You will gain
