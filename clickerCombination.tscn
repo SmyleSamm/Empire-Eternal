@@ -1,0 +1,32 @@
+[gd_scene load_steps=4 format=2]
+
+[ext_resource path="res://assets/fonts/presets/gameMenu.tres" type="DynamicFont" id=1]
+[ext_resource path="res://scenes/uiElements/buttons/clickerForCounter.tscn" type="PackedScene" id=2]
+[ext_resource path="res://clickerCombination.gd" type="Script" id=3]
+
+[node name="clickerCombination" type="Control"]
+script = ExtResource( 3 )
+
+[node name="HBoxContainer" type="HBoxContainer" parent="."]
+margin_right = 40.0
+margin_bottom = 40.0
+
+[node name="clickerForCounter" parent="HBoxContainer" instance=ExtResource( 2 )]
+margin_right = 200.0
+margin_bottom = 70.0
+script = null
+
+[node name="upgradeButton" type="Button" parent="HBoxContainer"]
+margin_left = 204.0
+margin_right = 354.0
+margin_bottom = 70.0
+rect_min_size = Vector2( 150, 60 )
+custom_fonts/font = ExtResource( 1 )
+text = "Cost: 
+100000
+Gain: 
++100000"
+align = 2
+
+[connection signal="pressed" from="HBoxContainer/clickerForCounter" to="." method="_on_clickerForCounter_pressed"]
+[connection signal="pressed" from="HBoxContainer/upgradeButton" to="." method="_on_upgradeButton_pressed"]
