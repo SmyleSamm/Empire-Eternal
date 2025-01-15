@@ -42,7 +42,7 @@ func _ready() -> void:
 func _on_timer_timeout() -> void:
 	player = getPlayer()
 	checkCounter()
-	
+	print("Label initialisation successfull")
 func _process(delta:float) -> void:
 	if not player:
 		return
